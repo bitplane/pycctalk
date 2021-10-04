@@ -105,7 +105,7 @@ class CoinAcceptor:
 
         # Accept all coins
         msg = Message(
-            src=1, dst=self.addr, header=Message.HEADER_MOD_INHIBIT, data=b"\xff"
+            src=1, dst=self.addr, header=Message.HEADER_MOD_INHIBIT, data=b"\xff\xff"
         )
         self.iface.send(msg)
         self.onInitCompleted()
